@@ -4,3 +4,6 @@ function aa(){
 }
 //do 
 aa();
+function bb(){
+    console.log('bb');
+}
