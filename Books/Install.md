@@ -52,11 +52,11 @@ grunt-contrib-uglify grunt-contrib-watch grunt-contrib-connect `
 		grunt.registerTask('default', ['uglify']);
 	};
 ```
+
 * 执行 grunt 命令（grunt命令会优先 gruntfile.js 下面的 task： default）
 ```js
 	grunt
 	或： grunt taskname
-
 ```
 > 关于项目移植：
   当上传项目时，可以忽略 node_modules 这个插件文件目录，当需要二次开发时，可使用以下命令重新安装

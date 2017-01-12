@@ -6,7 +6,7 @@ module.exports = function(grunt) {//配置 gruntjs 入口
     //uglify 的配置查看：https://github.com/gruntjs/grunt-contrib-uglify
     uglify: {                     //执行插件 uglify 所需要的配置
       options: {                  //配置--在压缩时顺便填上些 banner 信息，其中 pkg 来自上面的引用 package.json.
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'//在文件开头显示一个 banner 注释
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> <%= pkg.author %> */\n'//在文件开头显示一个 banner 注释
       },
       compressjs: {
         files: {
@@ -57,7 +57,7 @@ module.exports = function(grunt) {//配置 gruntjs 入口
       all: ['./scripts/a.js','./scripts/b.js','./scripts/ab.js']
     },
 
-        //监听任务：监听脚本，当脚本发生变化时，执行 tasks，监听 sass 当sass发生变化时，执行 task
+    //监听任务：监听脚本，当脚本发生变化时，执行 tasks，监听 sass 当sass发生变化时，执行 task
     watch: {
       scripts: {
         files: ['./scripts/a.js', './script/b.js'],
