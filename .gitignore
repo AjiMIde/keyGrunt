@@ -1,4 +1,5 @@
 # Click-Once directory
 node_modules/
 
-
+# aji
+.idea/
