@@ -3,13 +3,13 @@
 A learning for grunt-Aji-2017-01-01
 
 ## Desc:
-> GruntºÍ Grunt ²å¼şÊÇÍ¨¹ı?npm?°²×°²¢¹ÜÀíµÄ£¬npmÊÇ?Node.js?µÄ°ü¹ÜÀíÆ÷¡£
-  Äã¿ÉÒÔÈÏÎª grunt ÊÇ npm ÏÂµÄÒ»¸ö°ü£¬¶øÖÚ¶àµÄ grunt ²å¼şÒ²ÊÇ npm ÏÂµÄ°ü£¬¶ø grunt ÊÇÓÃÀ´½áºÏ grunt µÄ²å¼şÃÇÒ»ÆğÍê³ÉÒ»Ğ©ÌØ¶¨µÄ grunt ÈÎÎñ¡£
-  ËüÊÇÒ»¸ö¹¤¾ß¼¯¿ò¼Ü£¬¿¿×Å¸÷Ğ©²å¼şÀ´ÍØÕ¹Æä¹¦ÄÜ¡£
+> Gruntå’Œ Grunt æ’ä»¶æ˜¯é€šè¿‡Â npmÂ å®‰è£…å¹¶ç®¡ç†çš„ï¼Œnpmæ˜¯Â Node.jsÂ çš„åŒ…ç®¡ç†å™¨ã€‚
+  ä½ å¯ä»¥è®¤ä¸º grunt æ˜¯ npm ä¸‹çš„ä¸€ä¸ªåŒ…ï¼Œè€Œä¼—å¤šçš„ grunt æ’ä»¶ä¹Ÿæ˜¯ npm ä¸‹çš„åŒ…ï¼Œè€Œ grunt æ˜¯ç”¨æ¥ç»“åˆ grunt çš„æ’ä»¶ä»¬ä¸€èµ·å®Œæˆä¸€äº›ç‰¹å®šçš„ grunt ä»»åŠ¡ã€‚
+  å®ƒæ˜¯ä¸€ä¸ªå·¥å…·é›†æ¡†æ¶ï¼Œé ç€å„äº›æ’ä»¶æ¥æ‹“å±•å…¶åŠŸèƒ½ã€‚
 
 
 ## Site:
-[gruntjs.net ¹ÙÍø](http://www.gruntjs.net/)
+[gruntjs.net å®˜ç½‘](http://www.gruntjs.net/)
 
 [yujiangshui.com/grunt-basic-tutorial/](http://yujiangshui.com/grunt-basic-tutorial/)
 

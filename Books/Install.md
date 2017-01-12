@@ -1,28 +1,28 @@
-## °²×°
+## å®‰è£…
 
-### ÏÂÔØÓë°²×°
+### ä¸‹è½½ä¸å®‰è£…
 
-* ²é¿´node °æ±¾£º`node -v`
-* ²é¿´ npm °æ±¾£º`npm -v`
-* Éı¼¶×îĞÂµÄnpm£º`npm update -g npm`
-* °²×° Grunt ÃüÁîĞĞ£º `npm install -g grunt-cli`
-* ´ò¿ªĞèÒªÊ¹ÓÃ grunt µÄÎÄ¼şÄ¿Â¼£¬Ö´ĞĞ `npm init` ÌîĞ´Ïà¹ØÏîÄ¿ĞÅÏ¢
+* æŸ¥çœ‹node ç‰ˆæœ¬ï¼š`node -v`
+* æŸ¥çœ‹ npm ç‰ˆæœ¬ï¼š`npm -v`
+* å‡çº§æœ€æ–°çš„npmï¼š`npm update -g npm`
+* å®‰è£… Grunt å‘½ä»¤è¡Œï¼š `npm install -g grunt-cli`
+* æ‰“å¼€éœ€è¦ä½¿ç”¨ grunt çš„æ–‡ä»¶ç›®å½•ï¼Œæ‰§è¡Œ `npm init` å¡«å†™ç›¸å…³é¡¹ç›®ä¿¡æ¯
 
-### ÏÂÔØ²å¼ş
+### ä¸‹è½½æ’ä»¶
 
-#### ²å¼şÁĞ±í
+#### æ’ä»¶åˆ—è¡¨
 
-* ºÏ²¢ÎÄ¼ş£º`grunt-contrib-concat`
-* Óï·¨¼ì²é£º`grunt-contrib-jshint`
-* Scss ±àÒë£º`grunt-contrib-sass`
-* Ñ¹ËõÎÄ¼ş£º`grunt-contrib-uglify`
-* ¼àÌıÎÄ¼ş±ä¶¯£º`grunt-contrib-watch`
-* ½¨Á¢±¾µØ·şÎñÆ÷£º`grunt-contrib-connect`
+* åˆå¹¶æ–‡ä»¶ï¼š`grunt-contrib-concat`
+* è¯­æ³•æ£€æŸ¥ï¼š`grunt-contrib-jshint`
+* Scss ç¼–è¯‘ï¼š`grunt-contrib-sass`
+* å‹ç¼©æ–‡ä»¶ï¼š`grunt-contrib-uglify`
+* ç›‘å¬æ–‡ä»¶å˜åŠ¨ï¼š`grunt-contrib-watch`
+* å»ºç«‹æœ¬åœ°æœåŠ¡å™¨ï¼š`grunt-contrib-connect`
 
-#### °²×°ÓëÅäÖÃ
+#### å®‰è£…ä¸é…ç½®
 
 * `npm install grunt --save-dev`
->	°²×°ÍêÖ®ºó£¬»áÔÚ package.json?ÏÔÊ¾£º
+>	å®‰è£…å®Œä¹‹åï¼Œä¼šåœ¨ package.jsonÂ æ˜¾ç¤ºï¼š
 >
 >	"devDependencies": {
 	  "grunt": "^1.0.1"
@@ -31,9 +31,9 @@
 * `npm install --save-dev grunt-contrib-concat grunt-contrib-jshint grunt-contrib-sass
 grunt-contrib-uglify grunt-contrib-watch grunt-contrib-connect `
 
-> °²×°³É¹¦ºó£¬Ä¿Â¼ÓÖ¶à³öÒ»¸ö node_modules ÎÄ¼ş¼Ğ£¨¼¸Ê®M£©Õâ¾ÍÊÇ²å¼şµÄÀ´Ô´
+> å®‰è£…æˆåŠŸåï¼Œç›®å½•åˆå¤šå‡ºä¸€ä¸ª node_modules æ–‡ä»¶å¤¹ï¼ˆå‡ åMï¼‰è¿™å°±æ˜¯æ’ä»¶çš„æ¥æº
 
-* ±àĞ´ gruntfile.js£¬²¢±àĞ´ÒÔÏÂ´úÂë£º
+* ç¼–å†™ gruntfile.jsï¼Œå¹¶ç¼–å†™ä»¥ä¸‹ä»£ç ï¼š
 ```js
 	module.exports = function(grunt) {
 		grunt.initConfig({
@@ -52,23 +52,23 @@ grunt-contrib-uglify grunt-contrib-watch grunt-contrib-connect `
 		grunt.registerTask('default', ['uglify']);
 	};
 ```
-* Ö´ĞĞ grunt ÃüÁî£¨gruntÃüÁî»áÓÅÏÈ gruntfile.js ÏÂÃæµÄ task£º default£©
+* æ‰§è¡Œ grunt å‘½ä»¤ï¼ˆgruntå‘½ä»¤ä¼šä¼˜å…ˆ gruntfile.js ä¸‹é¢çš„ taskï¼š defaultï¼‰
 ```js
 	grunt
-	»ò£º grunt taskname
+	æˆ–ï¼š grunt taskname
 
 ```
-> ¹ØÓÚÏîÄ¿ÒÆÖ²£º
-  µ±ÉÏ´«ÏîÄ¿Ê±£¬¿ÉÒÔºöÂÔ node_modules Õâ¸ö²å¼şÎÄ¼şÄ¿Â¼£¬µ±ĞèÒª¶ş´Î¿ª·¢Ê±£¬¿ÉÊ¹ÓÃÒÔÏÂÃüÁîÖØĞÂ°²×°
-  £¨¸ÃÃüÁî»á¶ÁÈ¡ package.json²¢×Ô¶¯°²×°²å¼ş£©£º
+> å…³äºé¡¹ç›®ç§»æ¤ï¼š
+  å½“ä¸Šä¼ é¡¹ç›®æ—¶ï¼Œå¯ä»¥å¿½ç•¥ node_modules è¿™ä¸ªæ’ä»¶æ–‡ä»¶ç›®å½•ï¼Œå½“éœ€è¦äºŒæ¬¡å¼€å‘æ—¶ï¼Œå¯ä½¿ç”¨ä»¥ä¸‹å‘½ä»¤é‡æ–°å®‰è£…
+  ï¼ˆè¯¥å‘½ä»¤ä¼šè¯»å– package.jsonå¹¶è‡ªåŠ¨å®‰è£…æ’ä»¶ï¼‰ï¼š
 		`npm install`
 
-### ²å¼ş´óÈ«£º
+### æ’ä»¶å¤§å…¨ï¼š
 
-* ºÏ²¢ÎÄ¼ş£º`grunt-contrib-concat`
-* Óï·¨¼ì²é£º`grunt-contrib-jshint`
-* Scss ±àÒë£º`grunt-contrib-sass`
-* Ñ¹ËõÎÄ¼ş£º`grunt-contrib-uglify`
-* ¼àÌıÎÄ¼ş±ä¶¯£º`grunt-contrib-watch`
-* ½¨Á¢±¾µØ·şÎñÆ÷£º`grunt-contrib-connect`
+* åˆå¹¶æ–‡ä»¶ï¼š`grunt-contrib-concat`
+* è¯­æ³•æ£€æŸ¥ï¼š`grunt-contrib-jshint`
+* Scss ç¼–è¯‘ï¼š`grunt-contrib-sass`
+* å‹ç¼©æ–‡ä»¶ï¼š`grunt-contrib-uglify`
+* ç›‘å¬æ–‡ä»¶å˜åŠ¨ï¼š`grunt-contrib-watch`
+* å»ºç«‹æœ¬åœ°æœåŠ¡å™¨ï¼š`grunt-contrib-connect`
 * Less:`grunt-contrib-less`
