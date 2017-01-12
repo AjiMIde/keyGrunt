@@ -9,7 +9,9 @@
 	*  当只指定这个任务时，则遍历执行所有目标
 	*  执行方式：grunt concat
 * 任务中可以使用“配置”选项，这个选项将会应用到所有目标下面，当然，目标可以覆写该 options
+
 ```js
+
 grunt.initConfig({
   // 这里是concat任务的配置信息。
   concat: {
@@ -33,10 +35,13 @@ grunt.initConfig({
   my_src_files: ['foo/*.js', 'bar/*.js'],
 });
 ```
+
 #### Grunt 文件配置
 > Grunt 都是针对文件进行一个处理的，files 是 Grunt 的关键<br>
 > 有多种模式可以配置文件处理的路径等
+
 ```js
+
 grunt.initConfig({
   concat: {
     options: {},
