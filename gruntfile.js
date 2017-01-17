@@ -118,4 +118,16 @@ module.exports = function(grunt) {//配置 gruntjs 入口
   grunt.registerTask('concatjs',['concat']);
   grunt.registerTask('compressjs',['concat','jshint','uglify']);
   grunt.registerTask('watchit',['concat','jshint','uglify','connect','watch']);
+
+
+  grunt.registerTask('foo', 'My "foo" task.', function() {
+    // Enqueue "bar" and "baz" tasks, to run after "foo" finishes, in-order.
+    //grunt.task.run('bar', 'baz');
+    // Or:
+    //grunt.task.run(['bar', 'baz']);
+  });
+
+
+
+
 };
