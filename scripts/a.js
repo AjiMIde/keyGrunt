@@ -1,6 +1,5 @@
-function aa(){
-    console.log('I am aaaa function');
-    var aji ="";
+/*! keyGrunt 2017-01-17 AjiMIde */
+function aa() {
+	console.log("I am aaaaaaa function")
 }
-//do 
 aa();

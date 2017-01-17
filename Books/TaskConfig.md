@@ -87,3 +87,65 @@ grunt.initConfig({
 });
 ```
 
+#### Grunt 文件动态配置
+> 处理大量的单个文件时，使用动态构建文件对象 <br>
+> 这些属性都可以用于 `Compact` 和 `Files Array` 文件映射格式
+
+```js
+grunt.initConfig({
+  uglify: {
+    dynamic_mappings: {
+      // Grunt 会查找 "lib/**/*.js" 下的所有 js 文件。当配置生效时
+      files: [
+        {
+          expand: true,     // Enable dynamic expansion.允许动态拓展，此为必须
+          cwd: 'lib/',      // Src 配置将以此为根目录！
+          src: ['**/*.js'],
+          dest: 'build/',
+          ext: '.min.js',   // 目标文件的最终拓展名
+          extDot: 'first'   // Extensions in filenames begin after the first dot
+        },
+      ],
+    },
+  },
+});
+```
+
+#### Grunt 模板
+> 使用模板 `<%= %>` 分隔符指定模板将会从配置中读取数据进行扩展，看代码即懂<br>
+> 注！`grunt` `prop` 为全局对象和内部对象
+
+```js
+grunt.initConfig({
+  concat: {
+    sample: {
+      options: {
+        banner: '/* <%= ban %> */\n',   // '/* I am aji */\n'
+      },
+      src: ['<%= qux %>', 'baz/*.js']   // [['foo/*.js', 'bar/*.js'], 'baz/*.js']
+    },
+  },
+  //用于任务配置模板的任意属性
+  ban: 'I am aji',
+  qux: ['foo/*.js', 'bar/*.js'],
+});
+```
+
+#### Grunt 导入外部数据
+> 通过 `grunt.file.readJSON('xxx.json')`, `grunt.file.readYAML` 两方法引入　JSON　及　YAML　数据进行引用　
+
+```js
+grunt.initConfig({
+  pkg: grunt.file.readJSON('package.json'),
+  uglify: {
+    options: {
+      banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+    },
+    dist: {
+      src: 'src/<%= pkg.name %>.js',
+      dest: 'dist/<%= pkg.name %>.min.js'
+    }
+  }
+});
+```
+

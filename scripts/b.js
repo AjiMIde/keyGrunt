@@ -1,3 +1,4 @@
-function bb(){
-    console.log('bb');
+/*! keyGrunt 2017-01-17 AjiMIde */
+function bb() {
+	console.log("bbbbbb")
 }

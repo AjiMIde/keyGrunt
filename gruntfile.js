@@ -2,18 +2,21 @@ module.exports = function(grunt) {//配置 gruntjs 入口
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),     //读取 json 文件查看信息
 
-    //任务配置
-    //uglify 的配置查看：https://github.com/gruntjs/grunt-contrib-uglify
+    // 任务配置
+    // uglify 的配置查看：https://github.com/gruntjs/grunt-contrib-uglify
     uglify: {                     //执行插件 uglify 所需要的配置
       options: {                  //配置--在压缩时顺便填上些 banner 信息，其中 pkg 来自上面的引用 package.json.
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> <%= pkg.author %> */\n'//在文件开头显示一个 banner 注释
       },
-      compressjs: {
-        files: {
-          './scripts/a.min.js': ['./scripts/a.js'],
-          './scripts/b.min.js': ['./scripts/b.js'],
-          './scripts/ab.min.js': ['./scripts/ab.js']
-        }
+      doIt: {
+        files: [{
+          expand: true,
+          cwd: './scripts',
+          src: '**/*.js',
+          dest: './scripts',
+          ext: '.min.js',       // 目标文件的最终拓展名
+          extDot: 'first'       // Extensions in filenames begin after the first dot
+        }]
       }
     },
 
@@ -44,9 +47,9 @@ module.exports = function(grunt) {//配置 gruntjs 入口
     //合并 js 任务
     concat: {
       options: {
-        // separator: ';',
+        separator: ';\r\n',
       },
-      dist: {
+      doIt: {
         src: ['./scripts/a.js', './scripts/b.js'],
         dest: './scripts/ab.js',
       },
@@ -86,7 +89,8 @@ module.exports = function(grunt) {//配置 gruntjs 入口
           open: true,
           livereload: 35729,
           // Change this to '0.0.0.0' to access the server from outside
-          hostname: 'aji.com'
+          //hostname: 'aji.com'
+        hostname: '127.0.0.1'
       },
       server: {//开启服务器模块，并进行监听
         options: {
@@ -95,7 +99,6 @@ module.exports = function(grunt) {//配置 gruntjs 入口
         }
       }
     }
-
   });
 
   //加载此插件
