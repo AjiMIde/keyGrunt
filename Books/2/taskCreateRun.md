@@ -53,4 +53,5 @@ grunt.registerTask('foo', 'A sample task that logs stuff.', function(arg1, arg2)
 > grunt foo          // : foo, no args
 ```
 
-####
+#### 自定义任务
+> 请参考官方文档。
