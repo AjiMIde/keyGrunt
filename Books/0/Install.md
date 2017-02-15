@@ -55,11 +55,13 @@ grunt-contrib-uglify grunt-contrib-watch grunt-contrib-connect `
 
 * 合并文件：`grunt-contrib-concat`
 * 语法检查：`grunt-contrib-jshint`
-* Scss 编译：`grunt-contrib-sass`
-* 压缩文件：`grunt-contrib-uglify`
+* 压缩js文件：`grunt-contrib-uglify`
 * 监听文件变动：`grunt-contrib-watch`
 * 建立本地服务器：`grunt-contrib-connect`
-* Less:`grunt-contrib-less`
+* ==== css
+* scss 编译：`grunt-contrib-sass`
+* css文件压缩：`grunt-contrib-cssmin`
+* less 编译:`grunt-contrib-less`
 
 
 #### 其他
