@@ -1,6 +1,6 @@
-## 安装
+### 安装
 
-### 下载与安装
+#### 下载与安装
 
 * 查看node 版本：`node -v`
 * 查看 npm 版本：`npm -v`
@@ -8,30 +8,21 @@
 * 安装 Grunt 命令行： `npm install -g grunt-cli`
 * 打开需要使用 grunt 的文件目录，执行 `npm init` 填写相关项目信息
 
-### 下载插件
 
-#### 插件列表
+#### 项目安装与配置
 
-* 合并文件：`grunt-contrib-concat`
-* 语法检查：`grunt-contrib-jshint`
-* Scss 编译：`grunt-contrib-sass`
-* 压缩文件：`grunt-contrib-uglify`
-* 监听文件变动：`grunt-contrib-watch`
-* 建立本地服务器：`grunt-contrib-connect`
-
-#### 安装与配置
-
-* `npm install grunt --save-dev`
+* 下载 grunt `npm install grunt --save-dev`
 >	安装完之后，会在 package.json 显示：
 >
 >	"devDependencies": {
 	  "grunt": "^1.0.1"
 	}
 
-* `npm install --save-dev grunt-contrib-concat grunt-contrib-jshint grunt-contrib-sass
-grunt-contrib-uglify grunt-contrib-watch grunt-contrib-connect `
 
+* 下载插件：`npm install --save-dev grunt-contrib-concat grunt-contrib-jshint grunt-contrib-sass
+grunt-contrib-uglify grunt-contrib-watch grunt-contrib-connect `
 > 安装成功后，目录又多出一个 node_modules 文件夹（几十M）这就是插件的来源
+
 
 * 编写 gruntfile.js，并编写以下代码：
 ```js
@@ -58,12 +49,9 @@ grunt-contrib-uglify grunt-contrib-watch grunt-contrib-connect `
 	grunt
 	或： grunt taskname
 ```
-> 关于项目移植：
-  当上传项目时，可以忽略 node_modules 这个插件文件目录，当需要二次开发时，可使用以下命令重新安装
-  （该命令会读取 package.json并自动安装插件）：
-		`npm install`
 
-### 插件大全：
+
+#### 插件列表
 
 * 合并文件：`grunt-contrib-concat`
 * 语法检查：`grunt-contrib-jshint`
@@ -72,3 +60,13 @@ grunt-contrib-uglify grunt-contrib-watch grunt-contrib-connect `
 * 监听文件变动：`grunt-contrib-watch`
 * 建立本地服务器：`grunt-contrib-connect`
 * Less:`grunt-contrib-less`
+
+
+#### 其他
+**关于项目移植**<br>
+* 当上传项目时，可以忽略 node_modules 这个插件文件目录，当需要二次开发时，可使用以下命令重新安装
+  （该命令会读取 package.json并自动安装插件）：
+		`npm install`
+
+
+
