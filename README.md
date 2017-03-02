@@ -9,7 +9,7 @@
 * 自动化，去除重复的劳作
 
 #### Site:
-* [gruntjs.net 官网](http://www.gruntjs.net/)
+* [gruntjs.net 官网](http://www.gruntjs.net/) ***** 阅读--30%--下：创建任务
 
 * [yujiangshui.com/grunt-basic-tutorial/](http://yujiangshui.com/grunt-basic-tutorial/) ***** 阅读100%
 
