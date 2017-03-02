@@ -53,14 +53,16 @@ grunt-contrib-uglify grunt-contrib-watch grunt-contrib-connect `
 
 #### 插件列表
 
-* 合并文件：`grunt-contrib-concat`
-* 语法检查：`grunt-contrib-jshint`
+* js合并文件：`grunt-contrib-concat`
+* js语法检查：`grunt-contrib-jshint`
+* js压缩文件：`grunt-contrib-uglify`
+
+* Less:`grunt-contrib-less`
 * Scss 编译：`grunt-contrib-sass`
-* 压缩文件：`grunt-contrib-uglify`
+* cssmin: 'grunt-contrib-cssmin'
+
 * 监听文件变动：`grunt-contrib-watch`
 * 建立本地服务器：`grunt-contrib-connect`
-* Less:`grunt-contrib-less`
-
 
 #### 其他
 **关于项目移植**<br>

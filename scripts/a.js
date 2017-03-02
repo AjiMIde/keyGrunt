@@ -1,5 +1,5 @@
 /*! keyGrunt 2017-01-17 AjiMIde */
-function aa() {
-	console.log("I am aaaaaaa function")
+function a() {
+	console.log("I am a function");
 }
-aa();
+a();
