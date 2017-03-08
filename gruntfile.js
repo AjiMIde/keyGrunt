@@ -33,11 +33,12 @@ module.exports = function(grunt) {//配置 gruntjs 入口
   loadTasks(grunt, ['cssmin', 'connect', 'concat', 'jshint', 'less', 'sass', 'uglify', 'watch'])
 
   // 注册任务
-  grunt.registerTask('default', ['less:dev', 'concat', 'jshint','uglify','connect','watch']);
   grunt.registerTask('dev', ['jshint', 'less:dev', 'connect', 'watch' ]);
   grunt.registerTask('product', ['jshint', 'concat', 'uglify', 'less:dev', 'cssmin']);
+  grunt.registerTask('default', ['less:dev', 'concat', 'jshint','uglify','connect','watch']);
 
-  grunt.registerTask('test', ['cssmin']);
+  grunt.registerTask('test', ['less:keyCss']);
+  grunt.registerTask('test1', ['cssmin:keyMin']);
 
   // grunt.registerTask('default', ['uglify']);//将 uglify 任务注册到 default ，default为别名，执行命令：grunt时，优先会查找:gruntfile.js--default命令
   // grunt.registerTask('foo', 'My "foo" task.', function() {
