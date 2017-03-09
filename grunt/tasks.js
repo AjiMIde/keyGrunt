@@ -140,5 +140,14 @@ module.exports = {
 		doIt: ['./scripts/**/*.js', '!./scripts/dist/**/*.js']
 	},
 
+	// eslint ”Ô∑®ºÏ≤‚
+	eslint: {
+		options: {
+			configFile: './grunt/conf/.eslintrc.json',
+			// rulePaths: ['./grunt/conf/.eslintrc-rules']
+			// format: require('eslint-tap')
+		},
+		test: ['./scripts/**/*']
+	}
 }
 
