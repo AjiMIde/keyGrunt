@@ -25,5 +25,8 @@
   "homepage": "https://github.com/AjiMIde/keyGrunt",
   "devDependencies": {
     "grunt-eslint": "^19.0.0"
+  },
+  "dependencies": {
+    "standard": "^9.0.1"
   }
 }
