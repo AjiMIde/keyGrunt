@@ -52,14 +52,14 @@ module.exports = {
 			tasks: ['sass']
 		},*/
 		less: {
-			files: ['./less/**/*.less'],
-			tasks: ['less:dev2']
+			files: ['./styles/**/*.less', '!./styles'],
+			tasks: ['less:dev']
 		},
 		livereload: {
 			options: {
 				livereload: '<%= connect.options.livereload %>'
 			},
-			files: ['index.html', './less/*', './scripts/*']
+			files: ['index.html', './styles/dist/*', './scripts/*']
 		}
 	},
 
@@ -68,10 +68,6 @@ module.exports = {
 		options: {
 			// paths: ['./less']
 		},
-		devXX: {
-			src: './styles/less/style1.less',
-			dest: './styles/css/style1.css'
-		},
 		dev: {
 			files: [{
 				expand: true,
@@ -79,8 +75,14 @@ module.exports = {
 				src: '**/*.less',				// all less files
 				dest: './less',					// 输出位置
 				ext: '.css',						// 输出的拓展名
+
 				extDot: 'first'         // Extensions in file names begin after the first dot
 			}]
+		},
+		keyCss: {
+			files: {
+				'./libs/keyCommon/key.css': './libs/keyCommon/key.less'
+			}
 		}
 	},
 
@@ -101,11 +103,16 @@ module.exports = {
 		target: {
 			files: [{
 				expand: true,
-				cwd: './less',
+				cwd: './styles/dist',
 				src: ['*.css', '!*.min.css'],
 				dest: './less/dist/',
 				ext: '.min.css'
 			}]
+		},
+		keyMin: {
+			files: {
+				'./libs/keyCommon/key.min.css': './libs/keyCommon/key.css'
+			}
 		}
 	},
 
@@ -132,14 +139,21 @@ module.exports = {
 			separator: '\r\n',
 		},
 		doIt: {
-			src: ['./scripts/**/*.js'],
+			src: ['./scripts/hello.js', './scripts/time.js'],
 			dest: './scripts/dist/index.js',
 		},
 	},
 
 	//jshint 语法检测
 	jshint: {
-		doIt: ['./scripts/**/*.js']
+		doIt: ['./scripts/**/*.js', '!./scripts/dist/**/*.js']
 	},
-
+	eslint: {
+		options: {
+			configFile: './grunt/conf/.eslintrc.json',
+			// rulePaths: ['./grunt/conf/.eslintrc-rules']
+			// format: require('eslint-tap')
+		},
+		test: ['./scripts/**/*']
+	}
 }

@@ -26,18 +26,25 @@ module.exports = function(grunt) {//配置 gruntjs 入口
     sass: ts.sass,
     cssmin: ts.cssmin,
     uglify: ts.uglify,
-    watch: ts.watch
+    watch: ts.watch,
+    eslint: ts.eslint
   });
 
-  //加载插件
+  //加载插件 grunt 官方插件
   loadTasks(grunt, ['cssmin', 'connect', 'concat', 'jshint', 'less', 'sass', 'uglify', 'watch'])
 
+  //加载插件 非 官方插件
+  loadTasks(grunt, ['grunt-eslint'], false)
+
   // 注册任务
+
   grunt.registerTask('default', ['less:dev', 'concat', 'jshint','uglify','connect','watch']);
   grunt.registerTask('dev', ['jshint', 'less:dev', 'connect:server2', 'watch' ]);
-  grunt.registerTask('product', ['jshint', 'concat', 'uglify', 'less:dev', 'cssmin']);
 
-  grunt.registerTask('test', ['cssmin']);
+  grunt.registerTask('product', ['jshint', 'concat', 'uglify', 'less:dev', 'cssmin']);
+  grunt.registerTask('default', ['less:dev', 'concat', 'jshint','uglify','connect','watch']);
+
+  grunt.registerTask('test', ['eslint:test']);
 
   // grunt.registerTask('default', ['uglify']);//将 uglify 任务注册到 default ，default为别名，执行命令：grunt时，优先会查找:gruntfile.js--default命令
   // grunt.registerTask('foo', 'My "foo" task.', function() {
