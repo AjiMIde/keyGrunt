@@ -1,4 +1,4 @@
-/**
+ï»¿/**
  * Created by Administrator on 2016/3/2.
  *
  * ## desc:
@@ -15,7 +15,7 @@
  * var ts = require('.path/to/tasks.js') // can omit .js
  */
 module.exports = {
-	// ·şÎñÆ÷
+	// æœåŠ¡å™¨
 	connect: {
 		options: {
 			port: 9000,
@@ -25,15 +25,23 @@ module.exports = {
 			// hostname: 'aji.com'
 			hostname: '127.0.0.1'
 		},
-		server: {//¿ªÆô·şÎñÆ÷Ä£¿é£¬²¢½øĞĞ¼àÌı
+		server: {//å¼€å¯æœåŠ¡å™¨æ¨¡å—ï¼Œå¹¶è¿›è¡Œç›‘å¬
 			options: {
 				port: 9001,
 				base: './'
 			}
+		},
+		server2: {
+			options: {
+				port: 9001,
+				base: './',
+				hostname: '192.168.1.4'
+			}
 		}
+
 	},
 
-	// ¼àÌı·şÎñ
+	// ç›‘å¬æœåŠ¡
 	watch: {
 		scripts: {
 			files: ['./scripts/**/*.js'],
@@ -55,7 +63,7 @@ module.exports = {
 		}
 	},
 
-	// less ÅäÖÃ
+	// less é…ç½®
 	less: {
 		options: {
 			// paths: ['./less']
@@ -67,28 +75,28 @@ module.exports = {
 		dev: {
 			files: [{
 				expand: true,
-				cwd: './less',    			//¡¡Ö¸¶¨»ùÄ¿Â¼
+				cwd: './less',    			//ã€€æŒ‡å®šåŸºç›®å½•
 				src: '**/*.less',				// all less files
-				dest: './less',					// Êä³öÎ»ÖÃ
-				ext: '.css',						// Êä³öµÄÍØÕ¹Ãû
+				dest: './less',					// è¾“å‡ºä½ç½®
+				ext: '.css',						// è¾“å‡ºçš„æ‹“å±•å
 				extDot: 'first'         // Extensions in file names begin after the first dot
 			}]
 		}
 	},
 
-	// sass ÈÎÎñ
+	// sass ä»»åŠ¡
 	sass: {
 		output : {
 			options: {
 				style: 'expanded'
 			},
-			files: {//½« .scss ÎÄ¼ş±àÒë³É .css ÎÄ¼ş£¬×¢Òâ£¬´ËÊ±ĞèÒªÏµÍ³ÓĞ ruby ºÍ  sass »·¾³
+			files: {//å°† .scss æ–‡ä»¶ç¼–è¯‘æˆ .css æ–‡ä»¶ï¼Œæ³¨æ„ï¼Œæ­¤æ—¶éœ€è¦ç³»ç»Ÿæœ‰ ruby å’Œ  sass ç¯å¢ƒ
 				'./scss/style.css': './scss/style.scss'
 			}
 		}
 	},
 
-	// css min ÈÎÎñ
+	// css min ä»»åŠ¡
 	cssmin: {
 		target: {
 			files: [{
@@ -101,7 +109,7 @@ module.exports = {
 		}
 	},
 
-	// Ñ¹Ëõ javascript
+	// å‹ç¼© javascript
 	uglify: {
 		options: {
 			banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> <%= pkg.author %> */\n'
@@ -118,7 +126,7 @@ module.exports = {
 		}
 	},
 
-	// ºÏ²¢ js ÈÎÎñ
+	// åˆå¹¶ js ä»»åŠ¡
 	concat: {
 		options: {
 			separator: '\r\n',
@@ -129,10 +137,9 @@ module.exports = {
 		},
 	},
 
-	//jshint Óï·¨¼ì²â
+	//jshint è¯­æ³•æ£€æµ‹
 	jshint: {
 		doIt: ['./scripts/**/*.js']
 	},
 
 }
-

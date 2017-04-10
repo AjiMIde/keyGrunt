@@ -34,7 +34,7 @@ module.exports = function(grunt) {//配置 gruntjs 入口
 
   // 注册任务
   grunt.registerTask('default', ['less:dev', 'concat', 'jshint','uglify','connect','watch']);
-  grunt.registerTask('dev', ['jshint', 'less:dev', 'connect', 'watch' ]);
+  grunt.registerTask('dev', ['jshint', 'less:dev', 'connect:server2', 'watch' ]);
   grunt.registerTask('product', ['jshint', 'concat', 'uglify', 'less:dev', 'cssmin']);
 
   grunt.registerTask('test', ['cssmin']);
