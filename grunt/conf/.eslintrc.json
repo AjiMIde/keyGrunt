@@ -1,0 +1,13 @@
+{
+  "extends": "standard",
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "env": {
+    "browser": true
+  },
+  "rules": {
+     "indent": [0, 2]
+    // "semi": 0
+  }
+}

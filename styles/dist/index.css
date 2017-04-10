@@ -1,0 +1,23 @@
+body {
+  color: #333;
+  text-align: center;
+}
+h5 {
+  text-align: left;
+}
+.tip {
+  width: 500px;
+  text-align: left;
+  margin: 0 auto;
+}
+.tip li {
+  text-align: left;
+  padding: 4px 0;
+}
+.tip li b {
+  display: inline-block;
+  min-width: 100px;
+  background-color: #e5e5e5;
+  font-weight: normal;
+  color: #329bff;
+}
